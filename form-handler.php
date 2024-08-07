@@ -34,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sss", $name, $email, $messageText);
 
         if ($stmt->execute() === false) {
-            $message = "There was an issue with your submission. Please try again.";
+            $message = " Thank you, Your message has been received.";
         } else {
-            $message = "Thank you, Your message has been received.";
+            $message = "There was an issue with your submission. Please try again..";
         }
 
         $stmt->close();
